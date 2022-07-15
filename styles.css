@@ -47,6 +47,11 @@ body{
     padding-top: 15.5px;
     margin-right: 10px;
 }
+@media screen and (max-width:600px){
+    .question-div{
+        padding-right: 10px !important;
+    }
+}
 .question-div{
     height: max-content;
     padding-bottom: 1px;
