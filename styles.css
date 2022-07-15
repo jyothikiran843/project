@@ -11,6 +11,7 @@ body{
     box-shadow: 0px 1px 5px 1.6px rgb(179, 177, 177);
 }
 .infos{
+
     margin-left: 8%;
     line-height: 16px;
     margin-top: 13px;
@@ -19,23 +20,50 @@ body{
     margin-top: -6px;
 }
 .infos:first-child{
-    font-size: 19px; font-weight: 500; font-family: 'Roboto', sans-serif !important;
+    font-size: 19.2px; font-weight: 500; font-family: 'Roboto', sans-serif !important;
 }
 .infos:nth-child(2){
     font-size: 16px;font-weight: 100; font-family: 'Roboto', sans-serif !important;
 }
 .infos:nth-child(3){
-    font-size: 19px; font-weight: 700;font-family:  sans-serif !important; justify-content: center;
+    font-size: 19.2px; font-weight: 700;font-family:  sans-serif !important; justify-content: center;
 }
 .infos:nth-child(4){
     font-size: 16px;font-weight: normal; font-family:  sans-serif !important
-}   
+}  
+.question_text{
+    font-weight: bold;
+    
+}
+.container{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.question-number{
+    margin-left: 20px;
+    font-weight: bold;
+    padding-top: 15.5px;
+    margin-right: 10px;
+}
+.question-div{
+    height: max-content;
+    padding-bottom: 1px;
+    padding-right: 210px;
+    line-height: 18px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(172, 169, 169, 0.466);
+}
 .questions{
-    width: 80%;
+
+    top: 5px;
+    width: 82%;
     position: relative;
     line-height: 16px;
-    padding: 16px 16px 30px 16px;
-    height: 132px;
+    padding: 1px 16px 16px 10px;
+    height: max-content;
     background-color: white;
     border-radius: 1px;
     color: black;
@@ -43,15 +71,19 @@ body{
     font-size: 16px;
     font-weight: normal;
     box-shadow: rgb(0 0 0 / 26%) 0px 1px 8px;
-    margin-left: 8%;
-    margin-right: 8%;
+    /* margin-left: 8%;
+    margin-right: 8%; */
 }
-hr{
-    color: gray;
-    margin-top: 10px;
+#radio-inputs-div{
+    top: 4px;
+    position: relative;
+    margin-left: 18px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    /* background-color: red; */
 }
-.radio-inputs{
-    margin-left: -10px;
+.radio-input{
+    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.562);
     top: 30px;
     appearance: none;
     width: 92px;
@@ -60,10 +92,11 @@ hr{
     border-radius: 20px;
     cursor: pointer;
 }
-#radio-inputs-div{
-    position: relative;
-    margin-left: 30px;
-    margin-top: 25px;
+label:last-child{
+    margin-left: -80px;
+}
+.radio-input:last-child{
+    margin-left: -20px;
 }
 .radio-inputs:checked{
     border: 1px solid purple;
@@ -77,14 +110,15 @@ span{
     left: -90px; 
     font-size: 24px;
 }
-label{
+/* label{
     left: 24px;
-}
+} */
 b{
     font-family: 'Roboto';
     font-size: 12px;
     position: relative;
-    top: -5px;
+    top: -6px;
     left: -20px;
     font-weight: 500;
 }
+
