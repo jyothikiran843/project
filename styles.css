@@ -65,9 +65,6 @@ body{
         font-size: 15px;
         color: red;
     }
-    .nav-buttons{
-        padding: 0px;
-    }
 }
 .question-div{
     height: max-content;
@@ -227,13 +224,8 @@ b{
     letter-spacing: 0.2px;
     line-height: 14px;
 }
-/* #progress-bar{
-    height: 11px;
-    width: 165px;
-} */
 .answered{
-    margin-left: 120px;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     display: flex;
 }
 .estimated-time{
@@ -263,14 +255,20 @@ b{
     width: 100%;
     height: max-content;
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row;
+}
+.buttons{
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 .nav-buttons{
     cursor: pointer;
-    height: 36px;
-    padding: 0px;
-    width: 228px;
+    text-align: center;
+    padding: 11px 40px 10px 40px;
     font-family: myriad-pro, Arial, sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -278,10 +276,6 @@ b{
     background-color: black;
     border: none;
     border-radius: 8px;
-}
-.nav-buttons:last-child{
-    margin-left: 11px;
-    width: 184px;
 }
 #progress-bar{
     margin-top: 5px;
