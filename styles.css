@@ -51,6 +51,20 @@ body{
     .question-div{
         padding-right: 10px !important;
     }
+    .mobile-view{
+        width:90% !important;
+    }
+
+    .star{
+        right: 87% !important;
+        top: 70% !important;
+    }
+    .sodi-text:focus ~ .star{
+        right: 87% !important;
+        top: 65% !important;
+        font-size: 15px;
+        color: red;
+    }
 }
 .question-div{
     height: max-content;
