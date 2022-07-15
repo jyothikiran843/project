@@ -211,9 +211,6 @@ b{
     width: 100%;
     height: max-content;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
     justify-content: space-around;
     font-family: Roboto;
     font-size: 14px;
@@ -225,18 +222,17 @@ b{
     line-height: 14px;
 }
 .answered{
-    /* flex-grow: 1; */
     display: flex;
 }
-.estimated-time{
-    /* margin-left: 90px; */
+/* .estimated-time{
+    margin-left: 90px;
     flex-grow: 1;
 }
 .nextpage{
-    /* margin-left: 90px; */
+    margin-left: 90px;
     flex-grow: 1;
     width: max-content;
-}
+} */
 #next-page{
     cursor: pointer;
     height: 24px;
