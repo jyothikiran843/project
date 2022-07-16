@@ -205,13 +205,13 @@ b{
     visibility: hidden;
 }
 .footer-div{
+    display: flex;
+    justify-content: space-around;
     position: fixed;
     bottom: 0px;
     padding: 15px;
     width: 100%;
     height: max-content;
-    display: flex;
-    justify-content: space-around;
     font-family: Roboto;
     font-size: 14px;
     font-weight: 700;
@@ -223,16 +223,19 @@ b{
 }
 .answered{
     display: flex;
+    /* width: 40%; */
 }
-/* .estimated-time{
-    margin-left: 90px;
-    flex-grow: 1;
+.estimated-time{
+    /* width: 30%; */
+    /* margin-left: 90px;
+    flex-grow: 1; */
 }
 .nextpage{
-    margin-left: 90px;
+    /* width: 30%; */
+    /* margin-left: 90px;
     flex-grow: 1;
-    width: max-content;
-} */
+    width: max-content; */
+}
 #next-page{
     cursor: pointer;
     height: 24px;
