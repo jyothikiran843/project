@@ -5,6 +5,9 @@ allradios.forEach(ele=>{
 Array.from(document.getElementsByClassName('sodi-text')).forEach(inp=>{
     inp.addEventListener('keyup',errorProcess)
 })
+Array.from(document.getElementsByClassName('error-rows')).forEach(row=>{
+    row.addEventListener('click',navigateToQuestion)
+})
 function errorProcess(){
     if(this.value){
         this.nextElementSibling.nextElementSibling.style.visibility="hidden"
@@ -30,6 +33,21 @@ function radioChecked(){
         }
         else{
             console.log(rad.checked)
+        }
+    })
+}
+function navigateToQuestion(){
+    console.log(this.id)
+    window.location='#q'+this.id.slice(-1)
+}
+function checkAll(){
+    allradios.forEach(rad=>{
+        if(rad.checked){
+            document.getElementById('goto'+rad.name.slice(-1)).style.display="none"
+        }
+        else{
+            document.getElementById('goto'+rad.name.slice(-1)).style.display="block;"
+            document.getElementsByTagName('table')[0].style.display="block"
         }
     })
 }

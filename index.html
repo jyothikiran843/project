@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">   
     <link href="styles.css" rel="stylesheet">
     <link rel="icon" href="sources/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="header">
@@ -19,7 +20,7 @@
         <p class="infos">Other Details</p>
     </div>
     <div class="container">
-        <div class="questions">
+        <div id="q1" class="questions">
             <div class="question-div">
                 <div class="question-number">1.</div>
             <p class="question_text">
@@ -41,7 +42,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="questions">
+        <div id="q2" class="questions">
             <div class="question-div">
                 <div class="question-number">2.</div>
             <p class="question_text">              
@@ -63,7 +64,7 @@ Have you at any time been charged, acquitted or convicted by a court of law in I
         </div>
     </div>    
     <div class="container">
-        <div class="questions">
+        <div id="q3" class="questions">
             <div class="question-div">
                 <div class="question-number">3.</div>
             <p class="question_text">
@@ -85,7 +86,7 @@ Have you at any time been charged, acquitted or convicted by a court of law in I
         </div>
     </div>    
     <div class="container">
-        <div class="questions">
+        <div id="q4" class="questions">
             <div class="question-div">
                 <div class="question-number">4.</div>
             <p class="question_text">
@@ -107,7 +108,7 @@ Have you at any time been charged, acquitted or convicted by a court of law in I
         </div>
     </div>    
     <div class="container">
-        <div class="questions">
+        <div id="q5" class="questions">
             <div class="question-div">
                 <div class="question-number">5.</div>
             <p class="question_text">
@@ -130,7 +131,7 @@ Have you at any time been charged, acquitted or convicted by a court of law in I
         </div>
     </div>    
     <div class="container">
-        <div class="questions">
+        <div id="q6" class="questions">
             <div class="question-div">
                 <div class="question-number">6.</div>
             <p class="question_text">
@@ -152,7 +153,7 @@ Have you at any time been charged, acquitted or convicted by a court of law in I
         </div>
     </div>    
     <div class="container">
-        <div class="questions">
+        <div id="q7" class="questions">
             <div class="question-div">
                 <div class="question-number">7.</div>
             <p class="question_text">              
@@ -160,7 +161,7 @@ Have you at any time been charged, acquitted or convicted by a court of law in I
                 </p></div>
             <div id="radio-inputs-div">
                 <div class="radio-inputs">
-                    <label><input type="radio" name="question7" value="question7"  id="question" onclick="yes(7)" class="radio-input"><span>check_circle <b>YES</b> </span></label>
+                    <label><input type="radio" name="question7" value="question7"  id="question7" onclick="yes(7)" class="radio-input"><span>check_circle <b>YES</b> </span></label>
                     <label><input type="radio" name="question7" value="question7" id="question7" onclick="no(7)" class="radio-input"><span>cancel <b>NO</b></span></label>
                 </div>
             </div>
@@ -177,8 +178,55 @@ Have you at any time been charged, acquitted or convicted by a court of law in I
     <div class="buttons-to-navigate">
         <div class="buttons">
             <button class="nav-buttons">PREVIOUS PAGE</button>
-            <button class="nav-buttons">NEXT PAGE</button>
+            <button onclick="checkAll()" class="nav-buttons">NEXT PAGE</button>
         </div>
+    </div>
+    <div class="error-divs">
+        <p id="error-head-p">Errors</p>
+        <table cellspacing="0" class="errors-table">
+            <tbody>
+                <tr id="row-head">
+                    <th>Question</th>
+                    <th>Error</th>
+                    <th>Action</th>
+                </tr>
+                <tr id="goto1" class="error-rows">
+                    <td></td>
+                    <td>This is a required question</td>
+                    <td class="icon"><img class="eye-icon" src="eye.png"></td>
+                </tr>
+                <tr id="goto2" class="error-rows">
+                    <td></td>
+                    <td>This is a required question</td>
+                    <td class="icon"><img class="eye-icon" src="eye.png"></td>
+                </tr>
+                <tr id="goto3" class="error-rows">
+                    <td></td>
+                    <td>This is a required question</td>
+                    <td class="icon"><img class="eye-icon" src="eye.png"></td>
+                </tr>
+                <tr id="goto4" class="error-rows">
+                    <td></td>
+                    <td>This is a required question</td>
+                    <td class="icon"><img class="eye-icon" src="eye.png"></td>
+                </tr>
+                <tr id="goto5" class="error-rows">
+                    <td></td>
+                    <td>This is a required question</td>
+                    <td class="icon"><img class="eye-icon" src="eye.png"></td>
+                </tr>
+                <tr id="goto6" class="error-rows">
+                    <td></td>
+                    <td>This is a required question</td>
+                    <td class="icon"><img class="eye-icon" src="eye.png"></td>
+                </tr>
+                <tr id="goto7" class="error-rows">
+                    <td></td>
+                    <td>This is a required question</td>
+                    <td class="icon"><img class="eye-icon" src="eye.png"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="footer-div" id="footer">
         <div class="answered" id="no-of-answered">
@@ -196,7 +244,7 @@ Have you at any time been charged, acquitted or convicted by a court of law in I
             Estimated Time : 29 mins
         </div>
         <div class="nextpage">
-            <button id="next-page">NEXT PAGE</button>
+            <button onclick="checkAll()" id="next-page">NEXT PAGE</button>
         </div>
     </div>
     <div id="feedback-div">
