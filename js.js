@@ -50,7 +50,6 @@ function checkAll(){
                     document.getElementById('goto'+rad.name.slice(-1)).style.display="none"
                 }
                 else{
-                    document.getElementById('goto'+rad.name.slice(-1)).style.display="block"
                     errorflag++;
                 }
             }
