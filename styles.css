@@ -226,18 +226,6 @@ b{
 }
 .answered{
     display: flex;
-    /* width: 40%; */
-}
-.estimated-time{
-    /* width: 30%; */
-    /* margin-left: 90px;
-    flex-grow: 1; */
-}
-.nextpage{
-    /* width: 30%; */
-    /* margin-left: 90px;
-    flex-grow: 1;
-    width: max-content; */
 }
 #next-page{
     cursor: pointer;
@@ -323,6 +311,21 @@ tr{
     line-height: 14px;
     color: red;
 }
+th{
+    text-align: left;
+}
+td,th{
+    padding: 15px;
+}
+th:first-child,td:first-child{
+    width: 40%;
+}
+th:nth-child(2),td:nth-child(2),th:last-child,td:last-child{
+    width: 30%;
+}
+td{
+    text-align: justify;
+}
 #row-head{
     border-bottom: 1px solid rgba(128, 128, 128, 0.315);
 }
@@ -330,24 +333,11 @@ tbody{
     width: 100%;
     display: block;
 }
-th{
-    margin-left: 10%;
-    width: 20%;
-    padding-top: 15px;
-    flex-shrink: 1;
-    text-align: left;
-}
-td{
-    margin-left: 10%;
-    width: 20%;
-    padding-top: 15px;
-    flex-shrink: 1;
-    text-align: left;
-}
-tr:hover{
+tr:not(tr:first-child):hover{
     cursor: pointer;
-    background-color: rgb(255, 247, 233);
+    background-color: rgb(247, 243, 235);
     box-shadow: 2px 2px 4px 2px gray;
+    border-radius: 5px;
 }
 .eye-icon{
     height: 20px;

@@ -3,6 +3,9 @@ allradios.forEach(ele=>{
     ele.addEventListener('click',radioChecked);
 })
 Array.from(document.getElementsByClassName('sodi-text')).forEach(inp=>{
+    inp.addEventListener('focus',errorProcess)
+})
+Array.from(document.getElementsByClassName('sodi-text')).forEach(inp=>{
     inp.addEventListener('keyup',errorProcess)
 })
 Array.from(document.getElementsByClassName('error-rows')).forEach(row=>{
@@ -18,7 +21,7 @@ function errorProcess(){
 }
 function yes(value){
     document.getElementById("second-div"+value).style.display="block"
-
+    document.getElementById('goto'+value).firstElementChild.innerHTML="Input Field needs to be filled"
 }
 function no(value){
     document.getElementById("second-div"+value).style.display="none"
@@ -31,23 +34,38 @@ function radioChecked(){
             document.getElementById('progressed').style.width=progrss+'%'
             document.getElementById('answeredare').innerHTML=progrss
         }
-        else{
-            console.log(rad.checked)
-        }
     })
 }
 function navigateToQuestion(){
-    console.log(this.id)
     window.location='#q'+this.id.slice(-1)
 }
 function checkAll(){
+    var errorflag=0;
     allradios.forEach(rad=>{
         if(rad.checked){
-            document.getElementById('goto'+rad.name.slice(-1)).style.display="none"
+            if(rad.value=='yes'){
+                console.log(document.getElementById('input'+rad.name.slice(-1)).value)
+                if(document.getElementById('input'+rad.name.slice(-1)).value){
+                    console.log(document.getElementById('input'+rad.name.slice(-1)).value)
+                    document.getElementById('goto'+rad.name.slice(-1)).style.display="none"
+                }
+                else{
+                    document.getElementById('goto'+rad.name.slice(-1)).style.display="block"
+                    errorflag++;
+                }
+            }
+            else if(rad.value=='no'){
+                document.getElementById('goto'+rad.name.slice(-1)).style.display="none"
+            }
         }
         else{
             document.getElementById('goto'+rad.name.slice(-1)).style.display="block;"
             document.getElementsByTagName('table')[0].style.display="block"
+            errorflag++;
         }
     })
+    if(errorflag==7){
+        document.getElementsByTagName('table')[0].style.display="none"
+        window.location.href="https://www.youtube.com"
+    }
 }
