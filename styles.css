@@ -356,3 +356,8 @@ tr:not(tr:first-child):hover{
     font-weight: 600;
     color: red;
 }
+#img{
+    position: fixed;
+    right:0px;
+    bottom:40%;
+ }
